@@ -1,0 +1,6 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+# xgboost  ← uncomment if you decide to use it

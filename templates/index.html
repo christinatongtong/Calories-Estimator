@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calorie Burn Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Burn Predictor</h1>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST" action="/predict">
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender">
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" min="0" max="300">
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" name="height" id="height" min="150" max="250">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" name="weight" id="weight" min="20" max="300">
+            </div>
+
+            <div class="form-group">
+                <label for="workout_type">Workout Type:</label>
+                <select name="workout_type" id="workout_type" required>
+                    <option value="">Select workout type</option>
+                    <option value="cardio">Cardio</option>
+                    <option value="strength">Strength</option>
+                    <option value="yoga">Flexibility</option>
+                    <option value="hiit">HIIT</option>
+                    <option value="cycling">Cycling</option>
+                    <option value="running">Running</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Exercise Duration (minutes):</label>
+                <input type="number" name="duration" id="duration" required min="1" max="60">
+            </div>
+
+            <div class="form-group">
+                <label for="heart_rate">Heart Rate (bpm):</label>
+                <input type="number" name="heart_rate" id="heart_rate" min="50" max="200">
+            </div>
+
+            <button type="submit">Predict Calories</button>
+        </form>
+    </div>
+</body>
+</html>

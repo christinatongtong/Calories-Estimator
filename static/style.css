@@ -41,7 +41,7 @@ input, select {
 button {
     width: 100%;
     padding: 15px;
-    background-color: #007bff;
+    background-color: #dc3545;
     color: white;
     border: none;
     border-radius: 5px;
@@ -50,7 +50,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c82333;
 }
 
 .result {

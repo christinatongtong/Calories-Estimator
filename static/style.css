@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: lightgreen;
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/rear-view-of-runners-during-a-marathon-race-at-royalty-free-image-1749496689.pjpeg?crop=0.9028xw:1xh;center,top&resize=1200:*');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 20px;
 }
